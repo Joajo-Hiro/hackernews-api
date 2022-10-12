@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'graphene_django',
+    'links',
 ]
 
 MIDDLEWARE = [
@@ -76,10 +78,10 @@ WSGI_APPLICATION = 'hackernews.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djzdqtgu',
-        'USER': 'djzdqtgu',
-        'PASSWORD': 'BCzrgKJG5hTCJp9a7iG9Gd97blnBo7c4',
-        'HOST': 'heffalump.db.elephantsql.com',
+        'NAME': 'hackernews',#'djzdqtgu',
+        'USER': 'postgres',#'djzdqtgu',
+        'PASSWORD': 'OneKeyDB',#'BCzrgKJG5hTCJp9a7iG9Gd97blnBo7c4',
+        'HOST': 'localhost',#'heffalump.db.elephantsql.com',
         'PORT': 5432,
     }
 }
@@ -122,3 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+GRAPHENE = {
+    'SCHEMA': 'hackernews.schema.schema',
+}
+
